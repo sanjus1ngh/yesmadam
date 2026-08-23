@@ -70,6 +70,27 @@ input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(233,
 .faq{max-width:850px;margin:38px auto 0}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--muted);padding-top:10px}
 footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot b{color:white}
 .toast{position:fixed;right:22px;bottom:22px;background:#1c171b;color:#fff;padding:15px 18px;border-radius:14px;display:none;z-index:100;box-shadow:0 15px 35px #0003}
+
+.gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:42px}
+.gallery-main,.gallery-side img{width:100%;height:100%;object-fit:cover;border-radius:26px}
+.gallery-main{min-height:460px}
+.gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+.gallery-side img{height:221px}
+.caption{font-size:13px;color:var(--muted);margin-top:12px}
+.shark{background:linear-gradient(135deg,#fff2f7,#fff);border:1px solid #f2dce5;border-radius:34px;padding:48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.shark img{width:100%;height:390px;object-fit:cover;border-radius:25px}
+.shark h2{margin-top:8px}
+.deal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}
+.deal div{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}
+.deal b{display:block;color:var(--pink);font-size:21px}.deal span{font-size:12px;color:var(--muted)}
+.sharks{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
+.sharks span{padding:8px 11px;background:#211b21;color:#fff;border-radius:999px;font-size:12px;font-weight:700}
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
+.founder{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.founder img{width:100%;height:310px;object-fit:cover;object-position:center}
+.founder .body{padding:21px}.founder h3{margin-bottom:2px}.role{font-size:12px;color:var(--pink);font-weight:800}.founder p{font-size:13px;color:var(--muted);margin-top:9px}
+@media(max-width:850px){.gallery,.shark{grid-template-columns:1fr}.gallery-main{min-height:300px}.gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr}.gallery-side img{height:220px}.founders{grid-template-columns:1fr}.deal{grid-template-columns:1fr}}
+
 @media(max-width:850px){
  .navlinks{display:none}.hero-grid,.jobs,.formwrap{grid-template-columns:1fr}
  .hero{padding-top:110px}.hero-img{height:420px}.float.one{left:10px}.float.two{right:10px}
@@ -83,7 +104,7 @@ footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justif
  <div class="container navin">
   <a class="logo" href="#">Yes<span>Madam</span></a>
   <nav class="navlinks">
-   <a href="#benefits">Why Join</a><a href="#role">The Role</a><a href="#stories">Stories</a><a href="#faq">FAQ</a>
+   <a href="#benefits">Why Join</a><a href="#partners">Partners</a><a href="#sharktank">Shark Tank</a><a href="#founders">Founders</a><a href="#faq">FAQ</a>
   </nav>
   <a class="btn btn-primary" href="#apply">Apply Now</a>
  </div>
@@ -125,6 +146,23 @@ footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justif
  </div>
 </section>
 
+
+<section class="section soft" id="partners">
+ <div class="container center">
+  <div class="eyebrow">Meet the professionals</div>
+  <h2>Be part of a community of skilled partners</h2>
+  <p class="sub">Join a growing network of beauty and wellness professionals delivering services with YesMadam.</p>
+  <div class="gallery">
+   <img class="gallery-main" src="https://static.toiimg.com/thumb/msid-107733094,width-1280,height-720,imgsize-1345122,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" alt="YesMadam professional partners" onerror="this.src='https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85'">
+   <div class="gallery-side">
+    <img src="https://images.yourstory.com/cs/2/3fb20ae02dc911e9af58c17e6cc3d915/Imagehl96-1581684827372.jpg?auto=format&blur=500&fm=png" alt="YesMadam team">
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=85" alt="Professional female beauty therapist">
+   </div>
+  </div>
+  <p class="caption">Partner and team imagery is sourced from publicly available YesMadam-related pages and visual references. Replace external image URLs with licensed brand assets before production.</p>
+ </div>
+</section>
+
 <section class="section" id="role">
  <div class="container jobs">
   <img class="photo" src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1000&q=85" alt="Spa professional">
@@ -141,12 +179,57 @@ footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justif
  </div>
 </section>
 
+
+<section class="section" id="sharktank">
+ <div class="container">
+  <div class="shark">
+   <img src="https://static.toiimg.com/thumb/msid-107733094,width-1280,height-720,imgsize-1345122,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" alt="YesMadam founders on Shark Tank India">
+   <div>
+    <div class="eyebrow">As seen on Shark Tank India</div>
+    <h2>A Shark Tank success story</h2>
+    <p class="sub" style="margin:0">YesMadam's Season 3 pitch became a major milestone for the brand, bringing four Sharks together around the home beauty and wellness platform.</p>
+    <div class="deal">
+      <div><b>₹1.5 Cr</b><span>Investment agreed</span></div>
+      <div><b>2%</b><span>Equity in the final deal</span></div>
+      <div><b>4 Sharks</b><span>Joined the deal</span></div>
+    </div>
+    <div class="sharks"><span>Aman Gupta</span><span>Vineeta Singh</span><span>Peyush Bansal</span><span>Ritesh Agarwal</span></div>
+    <p class="caption">The final reported deal was ₹1.5 crore for 2% equity plus a 2% royalty until the investment was recouped. Terms should be independently verified before commercial publication.</p>
+    <a class="btn btn-primary" style="margin-top:18px" href="https://www.sonyliv.com/shows/shark-tank-india-1700000741/yes-madam-s-pitch-1000264948?watch=true" target="_blank" rel="noopener">Watch the Pitch →</a>
+   </div>
+  </div>
+ </div>
+</section>
+
 <section class="section soft" id="stories">
  <div class="container">
   <div class="testimonial">
    <div class="eyebrow" style="color:#ff7eab">Partner stories</div>
    <div class="quote">“After joining YesMadam I started enjoying my work. We are working in a very good working atmosphere.”</div>
    <div class="person">— Edla Varsha, Hyderabad</div>
+  </div>
+ </div>
+</section>
+
+
+<section class="section soft" id="founders">
+ <div class="container center">
+  <div class="eyebrow">The people behind YesMadam</div>
+  <h2>Meet the founding team</h2>
+  <p class="sub">The official YesMadam About Us page lists Mayank Arya, Aditya Arya and Akanksha Vishnoi as its founding team.</p>
+  <div class="founders">
+   <article class="founder">
+    <img src="https://ceosofbharat.com/wp-content/uploads/2024/08/1713153355455.jpg" alt="Mayank Arya, YesMadam Co-founder and CEO">
+    <div class="body"><h3>Mayank Arya</h3><div class="role">Co-founder & CEO</div><p>Leads the company with a focus on building a transparent, accountable and scalable home beauty platform.</p></div>
+   </article>
+   <article class="founder">
+    <img src="https://static.toiimg.com/thumb/msid-107733094,width-1280,height-720,imgsize-1345122,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" alt="Aditya Arya, YesMadam Co-founder and COO">
+    <div class="body"><h3>Aditya Arya</h3><div class="role">Co-founder & COO</div><p>Co-founder and operations leader whose journey from the maritime industry helped shape YesMadam's entrepreneurial story.</p></div>
+   </article>
+   <article class="founder">
+    <img src="https://www.bwdisrupt.com/images/uploads/2024/06/akanksha-vishnoi.jpg" alt="Akanksha Vishnoi, YesMadam Co-founder and CMO" onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85'">
+    <div class="body"><h3>Akanksha Vishnoi</h3><div class="role">Co-founder & CMO</div><p>Co-founder and brand/marketing leader who helped shape the YesMadam identity and customer-facing experience.</p></div>
+   </article>
   </div>
  </div>
 </section>
@@ -158,6 +241,12 @@ footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justif
    <h2 style="color:#fff">Ready to become a YesMadam spa therapist?</h2>
    <p>Fill in your details. Our team can connect with you regarding eligibility, city availability and the next steps.</p>
    <div style="margin-top:28px">✓ Female Spa Therapist<br>✓ Home-service comfort<br>✓ Professional opportunity<br>✓ Flexible schedule</div>
+<div style="margin-top:22px;font-size:14px;line-height:1.9">
+  <b>Recruitment Contact</b><br>
+  📞 <a href="tel:9155680346">9155680346</a><br>
+  ✉️ <a href="mailto:sanju.hiring@yesmadam.org">sanju.hiring@yesmadam.org</a>
+</div>
+
   </div>
   <form class="form" id="applyForm">
    <h3 style="font-size:25px;margin-bottom:20px">Apply as a Female Spa Therapist</h3>
@@ -193,7 +282,7 @@ footer{background:#171318;color:#cfc3ca;padding:45px 0}.foot{display:flex;justif
 
 <footer>
  <div class="container foot">
-  <div><b>YesMadam</b><br><small>Professional Spa & Beauty Opportunities</small></div>
+  <div><b>YesMadam</b><br><small>Professional Spa & Beauty Opportunities</small><div style="margin-top:10px;font-size:13px">📞 <a href="tel:9155680346">9155680346</a> &nbsp; | &nbsp; ✉️ <a href="mailto:sanju.hiring@yesmadam.org">sanju.hiring@yesmadam.org</a></div></div>
   <div><small>Recruitment landing page concept • Verify current hiring terms before publishing</small></div>
  </div>
 </footer>
